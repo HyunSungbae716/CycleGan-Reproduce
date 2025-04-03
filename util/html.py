@@ -67,7 +67,7 @@ class HTML:
 
     def save(self):
         """save the current content to the HMTL file"""
-        html_file = '%s/index.html' % self.web_dir
+        html_file = os.path.join(self.web_dir, 'index.html')
         f = open(html_file, 'wt')
         f.write(self.doc.render())
         f.close()
